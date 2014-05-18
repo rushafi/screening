@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  
+  form(id="location",name="location", action="/findLocation", method="post")
+      input(type="text", name="address", id="address")
+      br
+      input(type="submit", value="Find")
+
+  
+  script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
+  script(src='/javascripts/ajax.js')
+
+  #test
